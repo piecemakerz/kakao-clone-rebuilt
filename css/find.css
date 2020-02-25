@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .find .header-btn {
@@ -30,4 +30,8 @@
   opacity: 0.7;
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+.find__recommand .friend__add-btn {
+  cursor: pointer;
 }

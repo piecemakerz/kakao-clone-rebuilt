@@ -4,10 +4,9 @@
   left: 0px;
   width: 100%;
   z-index: 2;
-  padding: 10px 0px;
+  padding-top: 10px;
   background-color: white;
-  box-shadow: 0 18px 36px -18px rgba(0, 0, 0, 0.3),
-    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 .chats-body {
@@ -15,11 +14,6 @@
   padding-top: 130px;
   background-image: url("../images/chatBg.png");
   min-height: 1000vh;
-}
-
-.chats-body .header,
-.chats-body .status-bar {
-  padding: 0px 20px;
 }
 
 .chat .chat__messages {
@@ -55,16 +49,41 @@
   align-self: flex-end;
 }
 
+@keyframes avatar-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .message .message__avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   margin-right: 15px;
+  animation: avatar-float 3s linear infinite;
 }
 
 .message .message__content {
   display: flex;
   flex-direction: column;
+}
+
+@keyframes bubble-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .message__content .message__bubble {
@@ -76,6 +95,10 @@
   border-radius: 20px;
   color: white;
   font-weight: 600;
+}
+
+.message__content .message__bubble:hover {
+  animation: bubble-float 2s linear infinite;
 }
 
 .chat__incoming-message .message__bubble {

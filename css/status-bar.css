@@ -3,6 +3,7 @@
   justify-content: space-between;
   margin-bottom: 30px;
   opacity: 0.8;
+  padding: 0px 20px;
 }
 
 .status-bar__battery-level {

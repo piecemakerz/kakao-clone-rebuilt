@@ -11,14 +11,25 @@
 
 .friend__avatar {
   width: 50px;
+  height: 50px;
   border-radius: 38%;
 }
-.friend__avatar.g-avatar {
+
+.g-avatar {
   width: 70px;
+  height: 70px;
 }
 
-.friend__avatar.m-avatar {
+.m-avatar {
   width: 60px;
+  height: 60px;
+}
+
+.friend__avatar.avatar__default {
+  font-size: 30px;
+  padding: 10px 10px;
+  background-color: skyblue;
+  color: white;
 }
 
 .friend .friend__content {
